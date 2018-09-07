@@ -2,3 +2,31 @@ page = PAGE
 page.typeNum = 0
 config.contentObjectExceptionHandler = 0
 config.no_cache = 1
+
+page {
+    includeCSS {
+        10 = EXT:sandbox/Resources/Public/CSS/style.css
+    }
+
+    includeJSFooterlibs {
+
+    }
+
+    includeJSFooter {
+        10 = EXT:sandbox/Resources/Public/JS/main.js
+    }
+}
+
+
+page.10 = FLUIDTEMPLATE
+page.10 {
+    layoutRootPath = EXT:sandbox/Resources/Private/Layouts/
+    partialRootPath = EXT:sandbox/Resources/Private/Partials/
+    file = EXT:sandbox/Resources/Private/Templates/Default.html
+}
+
+lib.sandboxPlugin = RECORDS
+lib.sandboxPlugin {
+    tables = tt_content
+    source = 1
+}
