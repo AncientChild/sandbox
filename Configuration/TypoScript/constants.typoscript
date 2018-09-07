@@ -1,0 +1,10 @@
+module.tx_sandbox_highscore {
+    view {
+        templateRootPath = EXT:sandbox/Resources/Private/Backend/Templates/
+        partialRootPath = EXT:sandbox/Resources/Private/Backend/Partials/
+        layoutRootPath = EXT:sandbox/Resources/Private/Backend/Layouts/
+    }
+    persistence {
+        storagePid =
+    }
+}

@@ -11,5 +11,21 @@ call_user_func(
     }
 );
 
-//\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . 'Configuration/TSConfig/BackendLayouts.tsconfig">');
+
+if(TYPO3_MODE === 'BE') {
+    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerModule(
+        'Leon.Sandbox',
+        'tools', // Make module a submodule of 'tools'
+        'lab', // Submodule-key
+        '', // Position of module
+        [ // Allowed controller action combinations
+            'Lab' => 'index',
+        ],
+        [ // Additional configuration
+            'access' => 'user,group',
+            'icon' => 'EXT:sandbox/Resources/Public/Icons/Extension.png',
+            'labels' => 'LLL:EXT:sandbox/Resources/Private/Language/locallang_mod.xlf',
+        ]
+    );
+}
 
