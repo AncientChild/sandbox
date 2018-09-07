@@ -3,7 +3,7 @@
 $EM_CONF[$_EXTKEY] = [
     'title' => 'Sandbox',
     'description' => 'A sandbox-extension for practicing extbase',
-    'category' => 'misc',
+    'category' => 'templates',
     'author' => 'Leon Fretter',
     'author_company' => 'lionsware',
     'author_email' => 'gebichdirnich@real.de',

@@ -1,0 +1,26 @@
+<INCLUDE_TYPOSCRIPT: source="DIR: ./Modules" extensions="typoscript">
+
+page {
+    includeCSS {
+        10 = EXT:sandbox/Resources/Public/CSS/style.css
+    }
+
+    includeJSFooterlibs {
+
+    }
+
+    includeJSFooter {
+        10 = EXT:sandbox/Resources/Public/JS/main.js
+    }
+
+    20 = TEXT
+    20.value = Hallihallo
+
+    30 = RECORDS 
+    30 {
+        tables = tt_content
+        source = 1
+    }
+
+}
+
