@@ -2,13 +2,10 @@
 
 
 #Module configuration
-module.tx_sandbox_tools_sandboxhighscore {
-    persistence {
-        storagePid = {$module.tx_sandbox_highscore.persistence.storagePid}
-    }
+module.tx_lab {
     view {
-        templateRootPaths.0 = EXT:sandbox/Resources/Private/Backend/Templates/
-        partialRootPaths.0 = EXT:sandbox/Resources/Private/Backend/Partials/
-        layoutRootPaths.0 = EXT:sandbox/Resources/Private/Backend/Layouts/
+        templateRootPath = EXT:sandbox/Resources/Private/Backend/Templates/
+        partialRootPath = EXT:sandbox/Resources/Private/Partials/
+        layoutRootPath = EXT:sandbox/Resources/Private/Backend/Layouts/
     }
 }
