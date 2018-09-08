@@ -2,7 +2,7 @@
 
 
 #Module configuration
-module.tx_lab {
+module.tx_sandbox {
     view {
         templateRootPath = EXT:sandbox/Resources/Private/Backend/Templates/
         partialRootPath = EXT:sandbox/Resources/Private/Partials/

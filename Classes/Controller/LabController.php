@@ -6,6 +6,8 @@ use MyVendor\Sandbox\Domain\Repository\LabRepository;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 use TYPO3\CMS\Core\Messaging\AbstractMessage;
 use TYPO3\CMS\Core\Utility\DebugUtility;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Fluid\View\StandaloneView;
 
 /**
  * Class LabController
@@ -36,6 +38,10 @@ class LabController extends ActionController
      */
     public function indexAction()
     {
+        $this->view = GeneralUtility::makeInstance(StandaloneView::class);
+        $this->view->setTemplate('Index');
+        $this->view->setTemplateRootPaths(['EXT:sandbox/Resources/Private/Backend/Templates/Lab']);
+        $this->view->setLayoutRootPaths(['EXT:sandbox/Resources/Private/Backend/Layouts']);
         //fetch all lab-data from repository
         $labs = $this->labRepository->findAll();
         //check if any lab-data in the database
@@ -49,5 +55,6 @@ class LabController extends ActionController
 
         //assign highscore-data to view
         $this->view->assign('lab', $labs);
+        
     }
 }
